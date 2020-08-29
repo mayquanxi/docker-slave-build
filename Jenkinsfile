@@ -1,3 +1,4 @@
+//create new image with tag jenkins/jenkins_docker_slave
 pipeline {
 	agent {
 	  dockerfile {
