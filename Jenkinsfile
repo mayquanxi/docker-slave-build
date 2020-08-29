@@ -15,3 +15,5 @@ pipeline {
 		}
 	}
 }
+
+//http://192.168.168.1:8080/job/docker-slave-build/directive-generator/   #use pipeline systax for create agent dockerfile
