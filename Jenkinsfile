@@ -3,7 +3,7 @@ pipeline {
 	agent {
 	  dockerfile {
 	    additionalBuildArgs '--tag jenkins/jenkins_docker_slave'
-	    args '-p 2002:22'
+	    args '-p 2002:22'    //args for container, ssh to container over 2002 port on host
 	    dir '.'
 	    filename 'Dockerfile'
 	  }
@@ -11,6 +11,7 @@ pipeline {
 	stages {
 		stage('TEST') {
 			steps {
+				sh 'service ssh start'
 				sh 'ls -l'
 			}
 		}
